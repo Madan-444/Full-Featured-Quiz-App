@@ -1,0 +1,26 @@
+<form>
+                        <h2 className='text-left'><label>Number of Question :</label></h2>
+                        <input type='number' placeholder='Choose Number' min='0' max='20' style={{width:'500px'}} />
+                        <h2><label>Select Category :</label></h2>
+                        <select style={{width:'500px'}}  >
+                            <option>Any Category</option>
+                            <option>General Knowledge</option>
+                            <option>Science & Nature</option>
+                            <option>Science : Mathematics</option>
+                            <option>History</option>
+                            <option>Politics</option>
+                            <option>Animals</option>
+                        </select>
+                        <h2><label>Select Difficulty: </label></h2>
+                        <select style={{width:'500px'}}>
+                            <option>Easy</option>
+                            <option>Medium</option>
+                            <option>Hard</option>
+                        </select>
+                        <h2 className='m-4'><button type="button" class="btn btn-success">Generate Questions :</button></h2>
+                    </form>
+                    ***************************
+                    <Link to='/question'> </Link>
+                    https://opentdb.com/api.php?amount=${valuenum}&category=${category}&difficulty=${level}&type=multiple
+
+                    https://opentdb.com/api.php?amount=${valuenum}&category=${category}&difficulty=${level}&type=multiple
