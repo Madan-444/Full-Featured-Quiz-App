@@ -10,8 +10,7 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-    color:black;
+    position: absolute;
   }
   .boxx{
     height: 500px;

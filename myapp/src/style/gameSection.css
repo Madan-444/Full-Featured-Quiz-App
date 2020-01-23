@@ -1,0 +1,59 @@
+.gameSection{
+    background-image: url("./image1.jpg");
+    height: 700px;
+    width: 1360px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+.upperImg{
+    background-image: linear-gradient(to left, rgba(182, 141, 141, 0), rgb(194, 97, 97));
+
+    height: 700px;
+    width:600px;
+    align-self: auto;
+    background-color: rgb(57, 73, 73);
+}
+.question {
+    margin-top: 60px;
+    font-family: cursive;
+    background-image: linear-gradient(to right,  rgb(194, 97, 97), rgba(182, 141, 141, 0));
+    height: 60px;
+    width: 800px;
+    color:whitesmoke;
+}
+.button0{
+    background-image: linear-gradient(to right,  rgb(255, 255, 255), rgba(182, 141, 141, 0));
+    margin-top: 50px;
+    width: 500px;
+    color:black;
+
+}
+.button1{
+    background-image: linear-gradient(to right,  rgb(254, 255, 255), rgba(182, 141, 141, 0));
+    margin-top: 10px;
+    color:black;
+    width: 500px;
+}
+.btnNext {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #abec9b;
+    color: black;
+    font-size: 16px;
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .btnNext:hover {
+    background-color: rgb(117, 123, 204);
+    color: white;
+  }
+ 

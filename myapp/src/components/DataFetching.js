@@ -7,7 +7,7 @@ import Question from './Question'
 function DataFetching() {
     const [valuenum, setValue] = useState(0)
     const [category, setCatagory] = useState(22)
-    const [level, setLevel] = useState('Easy')
+    const [level, setLevel] = useState('easy')
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(false)
     const setNumber = (e) => {
@@ -17,34 +17,30 @@ function DataFetching() {
         setCatagory(e.target.value)
 
     }
-
-
-    console.log(data)
-
     var generateData = (e) => {
-        e.preventDefault()
-        console.log(valuenum)
         console.log(category)
         console.log(level)
-
+        e.preventDefault()
         axios.get(`https://opentdb.com/api.php?amount=${valuenum}&category=${category}&difficulty=${level}&type=multiple`)
             .then((res) => {
-                setData([...data, res.data.results])
-                setLoading(true)
-            })
+                setData([...data,res.data.results])
+                setLoading(true);
+            }
+            )
             .catch(err => console.log('error'))
-
     }
 
     return (
 
-        <div className='container-fluid hero-image'>
+        <div>
+            {! loading && 
+            <div className='container-fluid hero-image'>
             <div className='  row text-center'>
                 <div className='col-lg-12 offset-md-3'>
 
                     <div className=' boxx shadow-none p-3 mb-5 bg-light rounded' style={{ width: '700px' }}>
                         <div className='mt-5'>
-                            <form>
+                            <form onSubmit={generateData}>
                                 <h2 className='text-primary'><label>Find Your Questions  :</label></h2>
                                 <hr />
                                 <h4 className='pt-2'><label>Number of Question :</label></h4>
@@ -68,13 +64,22 @@ function DataFetching() {
                                     <option value='medium'>Medium</option>
                                     <option value='hard'>Hard</option>
                                 </select>
-                                <h2 className='m-4 '><button type="button" className="btn text-light bg-dark" onClick={generateData}>Generate Questions :</button></h2>
+                                <h2 className='m-4 '>
+                                    <button type="button" className="btn text-light bg-dark" type='submit' >Generate Questions :</button>
+                                </h2>
+
+
+
+
                             </form>
                         </div>
                     </div>
                 </div>
 
             </div>
+            
+        </div>}
+        {loading && <Question datat={data} />}
         </div>
     )
 }
