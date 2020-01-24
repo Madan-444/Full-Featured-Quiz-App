@@ -1,14 +1,16 @@
 import React from 'react';
 import DataFetching from './components/DataFetching';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Question from './components/Question';
-import Manxe from './components/Manxe'
-
 
 function App() {
   return (
     <div >
-      <DataFetching />
+      <Router>
+        <Switch>
+          {/* <Route  path = '/' component={Answers} /> */}
+          <Route   path = '/' component={DataFetching} />
+        </Switch>
+      </Router>
     </div>
   );
 }
