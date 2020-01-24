@@ -2,3 +2,9 @@
                 setData([...data, res.data.results])
                 setLoading(true)
             }
+            **************
+             {/* <div className='lcqs'>
+                        <div>Question Solved: {max}/{data.length} </div>
+                        <div>Category: {qtn.category} </div>
+                        <div>Level: {qtn.difficulty} </div>
+                    </div>

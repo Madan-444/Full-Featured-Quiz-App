@@ -11,7 +11,6 @@ function Question(props) {
             )
                 
             )}
-            <h1>hello Questions</h1>
         </div>
     )
 }
