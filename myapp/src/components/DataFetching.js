@@ -18,9 +18,11 @@ function DataFetching() {
 
     }
     var generateData = (e) => {
-        console.log(category)
-        console.log(level)
+        
         e.preventDefault()
+        if(valuenum=== false){
+            setLoading(false)
+        }
         axios.get(`https://opentdb.com/api.php?amount=${valuenum}&category=${category}&difficulty=${level}&type=multiple`)
             .then((res) => {
                 setData([...data,res.data.results])
